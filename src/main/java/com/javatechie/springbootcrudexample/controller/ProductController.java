@@ -28,11 +28,11 @@ public class ProductController {
     public List<Product> findAllProducts() {
         return  productService.getProducts();
     }
-    @GetMapping("/product/{id}") // if not exist you will get 404 (that why to use pathvariable rather than using Request Parameters)
+    @GetMapping("/product-by-id/{id}") // if not exist you will get 404 (that why to use pathvariable rather than using Request Parameters)
     public Product findProductById(@PathVariable int id) {
         return productService.getProductById(id);
     }
-    @GetMapping("/product/{name}")
+    @GetMapping("/product-by-name/{name}")
     public Product findProductByName(@PathVariable String name) {
         return productService.getProductByName(name);
     }
